@@ -61,19 +61,10 @@ group :development do
 end
 
 
-group :test do
-  gem 'pry'
-  gem "factory_girl_rails", "~> 1.2"
-  gem 'capybara'
-  gem 'guard-rspec'
-  gem 'rspec-rails'
-end
-
 gem "redis"
 gem 'redis-objects'
 gem "redis-search",path:'~/trunk/quora/vendor/redis-search'
 gem 'mobile-fu'
-gem 'savon'
 gem 'rest-client'
 gem 'rails_autolink'
 gem 'grim'
@@ -99,3 +90,5 @@ gem 'redcarpet'
 gem 'inherited_resources'
 gem 'browsernizer'
 gem 'haml'
+gem 'cap-recipes'
+
