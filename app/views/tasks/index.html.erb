@@ -1,0 +1,30 @@
+<div id="console_main">
+  <div class="CodeMirror">
+    <div id="console_content" class="cm-s-t2tasks">
+    </div>
+  </div>
+</div>
+<div id="console_ctrl">
+:<pre id="console_ctrl_pre">&nbsp;</pre>
+</div>
+
+<%content_for :butt do%>
+<%=javascript_include_tag('code')%>
+<script type="text/javascript" charset="utf-8">
+  T2Ku.window_resize_handler = function(){
+    var wid = window.innerWidth ? window.innerWidth : b(window).width(),
+        hei = window.innerHeight ? window.innerHeight : b(window).height();
+    $('#console_main').height(hei-91);
+    $('#console_content').height(hei-119);
+    T2KuConsole.setPage();
+  }
+  $(window).resize(T2Ku.window_resize_handler);
+  jQuery(function(){
+    window.T2KuConsole = new T2Ku.Views.Console({
+      el:$('#console_content')
+    });
+    T2KuConsole.tasks.reset(<%=raw @tasks.to_json%>);
+    T2Ku.window_resize_handler();
+  });
+</script>
+<%end%>

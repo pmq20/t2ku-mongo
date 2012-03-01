@@ -1,0 +1,30 @@
+/*
+ *= require ./bookview/basic
+ *= require_tree ./bookview
+ *= require_self
+*/
+.app{
+  margin-right:0 !important;
+  h1{
+    margin:0 !important;
+  }
+}
+#subheader .submenu {
+    margin: 4px 0 0 !important;
+}
+
+
+.ui-widget {
+    font-size: 12px;
+}
+.ui-widget .ui-widget {
+    font-size: 12px;
+}
+
+.edit_span{
+font-size: 16px;
+float: right;
+}
+div.sphinxsidebar a.selected{
+  color:white;
+}

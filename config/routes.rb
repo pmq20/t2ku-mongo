@@ -1,4 +1,33 @@
 T2kuPragmatic::Application.routes.draw do
+
+  constraints(Subdomain){match '/'=>'tasks#new'}
+  
+  devise_for :users,:controllers => { :registrations => "registrations" } do
+    get "/register", :to => "registrations#new",as:'register'
+    get "/login", :to => "devise/sessions#new",as:'login'
+    get '/logout', :to => "devise/sessions#destroy", as:'logout'
+  end
+  
+  resources :users
+  resources :tasks
+  resources :books do
+    resources :items
+  end
+  resources :definitions
+  resources :theorems
+  resources :problems
+  resources :references
+  resources :authors
+  resources :robots
+  resources :helps
+  get 'account' => 'account#index',:as=>'account'
+  get 'downloads' => 'home#downloads',:as=>'downloads'
+  get 'about' => 'home#about',:as=>'about'
+
+  root :to => 'home#index'  
+  post '/ajax/create_user' => 'ajax#create_user'
+  post '/ajax/save_new_task_description' => 'ajax#save_new_task_description'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

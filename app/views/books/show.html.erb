@@ -1,0 +1,36 @@
+<div class="section" id="">
+  <h1><%= @book.title %><span class="edit_span">[ <%= link_to 'Edit this Book',edit_book_path(@book) %> ]</span></h1>
+  <table class="docutils field-list" frame="void" rules="none">
+  <col class="field-name" />
+
+  <col class="field-body" />
+  <tbody valign="top">
+  <tr class="field"><th class="field-name">Authors:</th><td class="field-body">
+  <%@book.authors.each do |author| %>
+  <%= link_to author.name,author %>
+  <%end %>
+  </td>
+  </tr>
+  <tr class="field"><th class="field-name">Editors:</th><td class="field-body">
+  <%@book.users.each_with_index do |user,i| %>
+  <%= link_to user.name,user %><%= ', ' unless i+1==@book.users.count %>
+  <%end %>
+  </td>
+  </tr>
+  <tr class="field"><th class="field-name">Last Update:</th><td class="field-body"><%= time_ago_in_words(@book.updated_at) %> ago</td>
+  </tr>
+  </tbody>
+  </table>
+  <p><%= @book.description %></p>
+  
+  <h2>Table Of Contents</h2>
+  <ul>
+  <%@book.items.pageitems.topitems.order('rank').each do |item| %>
+    <li><%=link_to item.name,book_item_path(@book,item) %></li>
+    <%=raw traverse_children(item) %>
+  <%end %>
+  </ul>
+
+
+  <h2>Recent Edits</h2>
+</div>

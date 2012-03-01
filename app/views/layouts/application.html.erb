@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <title>T2kuPragmatic</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= get_title %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <%= stylesheet_link_tag    "pre_application" %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag    "pre_application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= params[:controller] %>" id="<%= pos_signature %>">
+	<header>
+	  <%= render 'headnav' %>
+	  <% if !user_signed_in? %>
+      <%=render 'loginreg' %>
+    <% else %>
+      <% content_for :butt do %>
 
-<%= yield %>
+        <script type="text/javascript" charset="utf-8">
+          jQuery(function() {
+            T2Ku.current_user = new T2Ku.Models.User;
+            T2Ku.current_user.set(<%=raw current_user.basic_attributes.to_json%>);
+          });
+        </script>
 
+      <% end %>
+    <% end %>
+	  <%= alert_or_notice(flash[:alert],flash[:notice]) %>
+	</header>
+	
+  <%= yield %>
+	
+  <footer>
+	  <%= render 'footer'%>
+  </footer>
+  
+  
+  <%= render 'commonjs' %>
+  <%= yield :butt %>
 </body>
 </html>
+

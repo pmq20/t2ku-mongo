@@ -1,0 +1,15 @@
+default: &defaults
+  book_path: "/books"
+  upload_url: "/uploads"
+  admin_emails: ['pmq2001@gmail.com']
+  email_sender: '"Kejian.TV 课件交流系统" <t2ku@t2ku.org>'
+
+development:
+  <<: *defaults
+  domain: "lvh.me"
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

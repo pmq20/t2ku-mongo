@@ -15,14 +15,23 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+if 'development'==Rails.env
+  $t2ku_domain = 'lvh.me:7777'
+else
+  $t2ku_domain = 't2ku.org'
+end
+
 module T2kuPragmatic
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-
+    config.action_controller.default_url_options = { :host => $t2ku_domain }
+    config.action_mailer.default_url_options = { :host => $t2ku_domain }
     # Custom directories with classes and modules you want to be autoloadable.
-    # config.autoload_paths += %W(#{config.root}/extras)
+    # config.autoload_paths << '#{Rails.root}/lib'
+    # config.autoload_paths += %W(#{config.root}/lib)
+    
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>T2Ku <%= controller.controller_name %> Browser</title>
+  <%= stylesheet_link_tag "pre_application" %>
+  <%= stylesheet_link_tag    "dtp" %>
+  <%= javascript_include_tag    "pre_application" %>
+</head>
+<body id="page">
+  
+  <header>
+	  <%= render 'headnav' %>
+	  <%= render 'loginreg' if !user_signed_in? %>
+	  <%= alert_or_notice(flash[:alert],flash[:notice]) %>
+	</header>
+
+  <div id="body">
+    <div id="browser">
+        <div class="inner">
+              <p class="loading"><%= image_tag 'icons/add.png' %> <%= link_to 'Add a Definition',new_definition_path,style:'color:white' %></p>
+<dl id="categories">
+  <% @objects.each do |item| %>
+  <dt id="0" onclick="window.location.href='<%=j definition_path(item) %>'">#<%= item.id %>. <%= item.name %></dt>
+  <%end %>
+</dl>
+
+        </div>
+    </div>
+    <div id="detail">
+        <div class="inner">
+          <%= yield %>
+        </div>
+    </div>
+  </div>
+  <p id="credit"><a href="http://api.jquery.com/browser/">Inspired by jQuery API-Browser</a></p>
+
+  <%= render 'commonjs' %>
+  <%= javascript_include_tag "dtp" %>
+  <%= yield :butt %>
+</body>
+</html>
