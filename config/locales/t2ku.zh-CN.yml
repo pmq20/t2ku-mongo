@@ -1,54 +1,64 @@
 zh-CN:
-  devise:
-    confirmations:
-      confirmed: 您的帐号已经确认，您现在已登录.
-      send_instructions: 几分钟后，您将收到确认帐号的电子邮件.
-      send_paranoid_instructions: 如果您的邮箱存在于我们的数据库中，您将收到一封确认账号的邮件.
-    failure:
-      already_authenticated: 您已经登录.
-      inactive: 您还没有激活帐户.
-      invalid: 邮箱或密码错误
-      invalid_token: 认证码无效.
-      locked: 您的帐号已被锁定.
-      timeout: 您已登录超时，请重新登录.
-      unauthenticated: 继续操作前请注册或者登录.
-      unconfirmed: 继续操作前请先确认您的帐号.
-    mailer:
-      confirmation_instructions:
-        subject: 确认信息
-      reset_password_instructions:
-        subject: 重置密码信息
-      unlock_instructions:
-        subject: 解锁信息
-    omniauth_callbacks:
-      failure: 因为%{reason}，所以您无法从%{kind}获得授权.
-      success: 成功地从%{kind}获得授权.
-    passwords:
-      send_instructions: 几分钟后，您将收到重置密码的电子邮件.
-      send_paranoid_instructions: 如果您的邮箱存在于我们的数据库中，您将收到一封找回密码的邮件.
-      updated: 您的密码已修改成功，您现在已登录.
-      updated_not_active: 您的密码已修改成功.
-    registrations:
-      signed_up_but_inactive: 谢谢您！然而您的账号还未被激活，在这之前无法登陆。
-      signed_up_but_locked: 谢谢您！然而您的账号已被锁定，无法登陆。
-      signed_up_but_unconfirmed: 谢谢您！一封确认邮件已经发至您的邮箱，请点击其中的链接激活您的账号。
-      update_needs_confirmation: 新的账号信息已成功提交，一封确认邮件已经发至您的邮箱，请点击其中的链接以使您的新E-mail地址生效。
-      destroyed: 再见！您的帐户已成功注销。我们希望很快可以再见到您.
-      signed_up: 欢迎您！您已注册成功.
-      updated: 帐号资料更新成功.
-    sessions:
-      signed_in: 登录成功.
-      signed_out: 退出成功.
-    unlocks:
-      send_instructions: 几分钟后，您将收到一封解锁帐号的邮件.
-      send_paranoid_instructions: 如果您的邮箱存在于我们的数据库中，您将收到一封解锁账号的邮件.
-      unlocked: 您的帐号已成功解锁，您现在已登录.
-  errors:
-    messages:
-      already_confirmed: 已经确认，请重新登录.
-      expired: 您已过期，请重新申请
-      not_found: 没有找到
-      not_locked: 未锁定
-      not_saved:
-        one: ! '因为1个错误导致此%{resource}保存失败:'
-        other: ! '因为%{count}个错误导致此%{resource}保存失败:'
+  t2ku:
+    main_menu: "主菜单"
+    navigation_tab:
+      tasks: "机器人状态"
+      tasks_new: "任务请求"
+      definitions: "定义库"
+      theorems: "定理库"
+      problems: "习题库"
+      helps: "帮助"
+      devise/registrations: "注册"
+      devise/sessions: "登录"
+      devise/passwords: "忘记密码"
+    navigation_special:
+      login: "登录"
+      reg: "注册"
+      logout: "退出"
+    qiuzheng0: "解析代码"
+    qiuzheng: "求证"
+    and: " 且"
+    notice: "提示"
+    failed: "失败"
+    ajax_failure: "与服务器通讯有误"
+    parse_result: "解析结果"
+    parse_error: "请纠正以下错误"
+    error: "错误"
+    proposition: "命题"
+    loginreg:
+      besides_login: "新用户注册"
+      resend_confirm_mail: "重发激活邮件"
+      button11: "登录"
+      button12: "取消"
+      button13: "转登录页"
+      button21: "注册"
+      button22: "取消"
+      button23: "转注册页"
+      length1: "的长度需要介于"
+      length2: "和"
+      length3: "之间."
+      passwd: "密码"
+      passwd_confirm: "密码确认"
+      passwd_forgot: "忘记密码"
+      passwd_new: "新密码"
+      passwd_forgot_submit: "发送密码重置邮件"
+      passwd_forgot_commit: "重置密码"
+      resend_confirm: "重发确认邮件"
+      reg_ok_msg: "<b>谢谢!</b> 我们已经向您的邮箱发送了一封确认邮件，请点击邮件中的确认链接完成注册.<br><br>未收到邮件?"
+      welcome_to_join: "欢迎加入T2Ku！"
+    inquiry1: "证明问题描述"
+    inquiry11: "searching for proofs"
+    inquiry1_help1: "题库可识别哪些数学表述？快速检索"
+    inquiry1_help2: "浏览更多示例"
+    inquiry2: "条目查询"
+    inquiry22: "entry look up"
+    confirm_mail:
+      p1: "欢迎您,"
+      p2: "还差一步就可完成T2Ku.org的注册！ 请点击下面的链接激活您的帐号："
+      p3: "邮箱地址确认"
+    reset_mail:
+      p1: "您好,"
+      p2: "我们收到重置密码的请求，您可以通过以下链接重置您的密码."
+      p3: "如果不是您发出的这个请求，请忽略这个邮件."
+      p4: "除非您访问上述链接并修改了密码，您的密码不会发生改变."
+      
