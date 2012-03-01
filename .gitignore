@@ -70,3 +70,5 @@ db/*.sqlite3
 
 # vim artifacts
 **.swp
+
+/test/sandbox/

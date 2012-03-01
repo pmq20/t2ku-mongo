@@ -1,6 +1,5 @@
-
 module T2Ku
-  class Page
- 
+  class Page < Gollum::Page
+    
   end
 end
