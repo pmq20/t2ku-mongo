@@ -51,7 +51,7 @@ T2kuPragmatic::Application.configure do
   config.assets.precompile << 'dtp.css'
   
   config.assets.precompile << 'pre_application.js'
-  config.assets.precompile << 'app.js'
+  config.assets.precompile << 'application.js'
   config.assets.precompile << 'code.js'
   config.assets.precompile << 'dtp.js'
 

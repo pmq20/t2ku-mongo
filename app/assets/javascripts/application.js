@@ -15,3 +15,4 @@
 //= require_tree ./app/routers
 //= require_tree ./app/views
 //= require ext
+//= require_self

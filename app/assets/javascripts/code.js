@@ -7,3 +7,4 @@
 //= require codemirror
 //= require runmode
 //= require_tree ./code
+//= require_self
