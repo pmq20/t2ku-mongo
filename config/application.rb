@@ -15,7 +15,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-if 'development'==Rails.env
+# suppose that we deployed to /home/wwwroot/pro_t2/
+unless __FILE__.starts_with?('/home/wwwroot/pro_t2/')
   $t2ku_domain = 'lvh.me:7777'
 else
   $t2ku_domain = 't2ku.org'

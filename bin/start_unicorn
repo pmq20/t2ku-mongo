@@ -1,0 +1,3 @@
+#!/bin/bash -x
+bundle exec unicorn_rails -c config/unicorn.conf.rb -E development -D
+
