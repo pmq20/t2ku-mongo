@@ -18,7 +18,7 @@ class T2Ku.Views.UsersNew extends Backbone.View
     e.preventDefault()
     e.stopPropagation()
     $('#error_reg').hide()
-    @options.model.unset("error")
+    # @options.model.unset("error")
     params={
       name: e.target["user[name]"].value
       email: e.target["user[email]"].value

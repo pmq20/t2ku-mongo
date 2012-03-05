@@ -26,6 +26,7 @@ zh-CN:
     error: "错误"
     proposition: "命题"
     loginreg:
+      username: '用户名'
       besides_login: "新用户注册"
       resend_confirm_mail: "重发激活邮件"
       button11: "登录"

@@ -3,7 +3,7 @@
 <div id="headnav">
   <div class="lefttop">
     <div class="group" id="main_menu" onclick="event.stopPropagation()">
-      <%= link_to tt('main_menu'),'#',id:"main_menu_link"%>
+      <%= link_to tt('main_menu'),root_path,id:"main_menu_link"%>
 			<ol style="display:none" id="menu_body"> 
 				<%= render :file=>'application/_sys_menu' %>
 			</ol>
@@ -19,9 +19,7 @@
 		<% end %>
 	</div>
 </div>
-
-<script type="text/javascript">
-$(document).ready(function () {
+<% content_for :butt2 do %>
   $('#main_menu_link').click(function () {
 		$('ol#menu_body').slideToggle('fast');
 		return false;
@@ -31,9 +29,7 @@ $(document).ready(function () {
 			$('ol#menu_body').slideToggle('fast');
 		} 
   });
-});
-</script>
-
+<% end %>
 <% else %>
 
 <%= render file:'application/_headnav' %>

@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
   include UrlHelper
 
   before_filter :set_locale,:view_no,:login_reg
-
+  before_filter proc{
+    # render text:headers and return
+  }
   def set_locale
     I18n.locale = extract_locale_from_subdomain || I18n.default_locale
   end

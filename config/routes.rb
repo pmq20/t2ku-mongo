@@ -2,7 +2,7 @@ T2kuPragmatic::Application.routes.draw do
 
   constraints(Subdomain){match '/'=>'tasks#new'}
   
-  devise_for :users,:controllers => { :registrations => "registrations" } do
+  devise_for :users,:controllers => { :registrations => "registrations" },:path => 'd' do
     get "/register", :to => "registrations#new",as:'register'
     get "/login", :to => "devise/sessions#new",as:'login'
     get '/logout', :to => "devise/sessions#destroy", as:'logout'

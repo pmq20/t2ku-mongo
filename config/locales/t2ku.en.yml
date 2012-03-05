@@ -27,6 +27,7 @@ en:
     error: "Error"
     proposition: "Proposition"
     loginreg:
+      username: "User Name"
       resend_confirm_mail: "Resend Confirmation Mail"
       besides_login: "New User Signup"
       button11: "Login"

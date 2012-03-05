@@ -94,7 +94,7 @@ module ApplicationHelper
     options[:style] ||= ''
     if alert or notice
       if notice
-        notice+='.' unless notice.ends_with?('.')
+        notice+='.' unless notice.ends_with?('.') or notice.ends_with?('。') 
         simple = (notice==t('devise.sessions.signed_in') || notice==t('devise.sessions.signed_out'))
         if simple
           ret <<'<div class="alert_or_notice" style="'+options[:style]+'">

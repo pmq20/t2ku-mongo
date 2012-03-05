@@ -46,6 +46,12 @@
   
   <%= render 'commonjs' %>
   <%= yield :butt %>
+  <script type="text/javascript" charset="utf-8">
+     jQuery(function(){
+      <%= yield :butt2 %>
+     })
+  </script>
+  
 </body>
 </html>
 

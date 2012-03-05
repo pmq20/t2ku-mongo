@@ -1,14 +1,14 @@
 #big_logo
-  = image_tag "/images/logo_up.#{I18n.locale}.png",id:'logo_up'
+  = image_tag "logo_up.#{I18n.locale}.png",id:'logo_up'
   %br
-  = link_to image_tag('/images/logo.png'),'/',class:'special',id:'logo'
+  = link_to image_tag('logo.png'),'/',class:'special',id:'logo'
   %br
-  = image_tag '/images/logo_down.png',id:'logo_down'
+  = image_tag 'logo_down.png',id:'logo_down'
 
 #portal
   #portal_links
     .right
-      =image_tag "/images/nav-highlight-vertical.png",id:'nav-highlight-vertical'
+      =image_tag "nav-highlight-vertical.png",id:'nav-highlight-vertical'
     .right
       %p#p_1.selected
         %span= tt('inquiry1')
