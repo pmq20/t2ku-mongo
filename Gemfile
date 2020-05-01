@@ -7,7 +7,7 @@ gem 'rails', '3.2.2'
 
 
 # MongoDB
-gem "mongoid", "~> 2.4"
+gem "mongoid", "~> 3.0", ">= 3.0.0"
 gem "bson_ext", "~> 1.5"
 
 
@@ -71,7 +71,7 @@ gem 'grim'
 gem 'rest-client'
 gem "letter_opener", :group => :development
 # gem 'stringex'
-gem 'mongoid_slug'
+gem 'mongoid_slug', '>= 1.0.0'
 gem 'voteable_mongo', path:'~/trunk/quora/vendor/voteable_mongo'
 gem 'pry-rails', :group => :development
 
