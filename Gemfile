@@ -1,6 +1,6 @@
 source 'http://ruby.taobao.org/'
 
-gem 'rails', '3.2.2'
+gem 'rails', '4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -64,9 +64,9 @@ end
 gem "redis"
 gem 'redis-objects'
 gem "redis-search",path:'~/trunk/quora/vendor/redis-search'
-gem 'mobile-fu'
+gem 'mobile-fu', '>= 1.0.0'
 gem 'rest-client'
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.0'
 gem 'grim'
 gem 'rest-client'
 gem "letter_opener", :group => :development
