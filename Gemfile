@@ -1,21 +1,21 @@
 source 'http://ruby.taobao.org/'
 
-gem 'rails', '3.2.2'
+gem 'rails', '5.2.4.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
 # MongoDB
-gem "mongoid", "~> 2.4"
+gem "mongoid", "~> 6.0", ">= 6.0.0"
 gem "bson_ext", "~> 1.5"
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails', '~> 5.0.5'
+  gem 'coffee-rails', '~> 4.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
@@ -23,13 +23,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.0.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-gem 'jbuilder'
+gem 'jbuilder', '>= 0.3.2'
 
 # Use unicorn as the web server
 gem 'unicorn'
@@ -39,7 +39,7 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-gem 'devise'
+gem 'devise', '>= 4.4.2'
 
 gem 'will_paginate'#,:require=>'will_paginate/array'
 gem "will_paginate_mongoid",:path=>'~/trunk/quora/vendor/will_paginate_mongoid'
@@ -50,7 +50,7 @@ group :development do
   gem 'pry'
   gem "letter_opener"
   gem 'guard-spork'
-  gem "rspec-rails"
+  gem "rspec-rails", ">= 2.8.1"
   gem 'RedCloth'
   gem 'mocha'
   gem 'org-ruby'
@@ -64,14 +64,14 @@ end
 gem "redis"
 gem 'redis-objects'
 gem "redis-search",path:'~/trunk/quora/vendor/redis-search'
-gem 'mobile-fu'
+gem 'mobile-fu', '>= 1.0.0'
 gem 'rest-client'
-gem 'rails_autolink'
+gem 'rails_autolink', '>= 1.1.0'
 gem 'grim'
 gem 'rest-client'
 gem "letter_opener", :group => :development
 # gem 'stringex'
-gem 'mongoid_slug'
+gem 'mongoid_slug', '>= 3.0.0'
 gem 'voteable_mongo', path:'~/trunk/quora/vendor/voteable_mongo'
 gem 'pry-rails', :group => :development
 
